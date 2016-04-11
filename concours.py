@@ -29,10 +29,10 @@ br.set_handle_robots(False)
 br.addheaders = [('User-agent', 'Firefox')]
 
 # Init new values:
-candidats["date"] = ""
-candidats["domaine"] = ""
-candidats["nom2"] = ""
-candidats["link"] = ""
+candidats["date"] = " "
+candidats["domaine"] = "  "
+candidats["nom2"] = " "
+candidats["link"] = " "
 
 for index, candidat in candidats.iterrows():
     nameLink = "http://www.theses.fr/?q="+candidat.nom+"+"+candidat.prenom
