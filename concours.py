@@ -34,6 +34,9 @@ candidats["domaine"] = "  "
 candidats["nom2"] = " "
 candidats["link"] = " "
 
+candidats["genre"] = -1
+
+
 for index, candidat in candidats.iterrows():
     nameFormated = candidat.nom.replace(" ", "+")+"+"+candidat.prenom.replace(" ", "+")
     
