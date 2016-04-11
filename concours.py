@@ -35,7 +35,12 @@ candidats["nom2"] = " "
 candidats["link"] = " "
 
 for index, candidat in candidats.iterrows():
-    nameLink = "http://www.theses.fr/?q="+candidat.nom+"+"+candidat.prenom
+    nameFormated = candidat.nom.replace(" ", "+")+"+"+candidat.prenom.replace(" ", "+")
+    
+    #nameLink = "http://www.theses.fr/?q="+nameFormated
+    nameLink = "http://www.theses.fr/?q=&zone1=titreRAs&val1=&op1=AND&zone2=auteurs&val2="+nameFormated+"&op2=AND&zone3=etabSoutenances&val3=&op3=AND&zone4=dateSoutenance&val4a=&val4b="
+    
+    
     print nameLink
     candidats.set_value(index, "link", nameLink)
     
@@ -48,7 +53,7 @@ for index, candidat in candidats.iterrows():
     html = (br.open(nameLink)).get_data()
     htmlLines = html.split("\n")
     for h in htmlLines:
-        if 'class="soutenue"' in h:
+        if ('class="soutenue"' in h) | ('class="preparation"' in h):
             #h.find("Soutenue"):
             lineDate.append(line)
             #print h
@@ -57,7 +62,7 @@ for index, candidat in candidats.iterrows():
             lineDomaine.append(line+1)
             #print h
 
-        if '<p>par <a href=' in h:
+        if '<p>par ' in h:
             lineName.append(line)
 
         line += 1
@@ -71,18 +76,50 @@ for index, candidat in candidats.iterrows():
         domaines = []
         names = []
         for lDate, lDomaine, lName in zip(lineDate, lineDomaine, lineName):
-            dates.append(htmlLines[lDate].replace('<h5 class="soutenue">', '').replace("</h5>\r", ''))
+            if "outenue" in htmlLines[lDate]:
+                dates.append(htmlLines[lDate].replace('<h5 class="soutenue">', '').replace("</h5>\r", ''))
+            else:
+                dates.append(htmlLines[lDate].replace('<h5 class="preparation">', '').replace("</h5>\r", ''))
             domaines.append(htmlLines[lDomaine].replace('<h5>', '').replace("</h5>\r", ''))
-            cleanerName = htmlLines[lName].replace('<p>par <a href=/', '') # Replace all this shit by a regex!
+            cleanerName = htmlLines[lName].replace('<p>par <a href=/', '').replace('<p>par ', '') # Replace all this shit by a regex!
             whNameStarts = cleanerName.find(">")
             whNameEnds = cleanerName.find("</a>\r")
             names.append(cleanerName[whNameStarts+1:whNameEnds])
         if len(names) == 0:
             continue
-        candidats.set_value(index, "nom2", names[0])
-        candidats.set_value(index, "domaine", domaines[0])
-        candidats.set_value(index, "date", dates[0])
-        print dates[0], domaines[0], names[0]
+        
+        resultPosition = 0
+        if nameFormated == "GIRARD+JULIEN":
+            resultPosition = 3
+        if nameFormated == "FAVRE+CECILE":
+            resultPosition = 2
+        if nameFormated == "ADAM+REMI":
+            resultPosition = 1
+        if nameFormated == "BRUN+FRANCOIS":
+            resultPosition = 5
+        if nameFormated == "PARIS+ISABELLE":
+            resultPosition = 1
+        if nameFormated == "RODRIGUES+MYRIAM":
+            resultPosition = 1
+        if nameFormated == "DANIEL+FABIEN":
+            resultPosition = 1
+        if nameFormated == "DEMANGEON+OLIVIER":
+            resultPosition = 1
+        if nameFormated == "LOIZEAU+DAMIEN":
+            resultPosition = 1
+        if nameFormated == "PRAT+VINCENT":
+            resultPosition = 1
+        
+        candidats.set_value(index, "nom2", names[resultPosition])
+        candidats.set_value(index, "domaine", domaines[resultPosition])
+        candidats.set_value(index, "date", dates[resultPosition])
+        print dates[resultPosition], domaines[resultPosition], names[resultPosition]
+
+        #if nameFormated == "DESMARS+JOSSELIN":
+        #    sys.exit()
+
+
+candidats["year"] = candidats.date.str.extract("(19[0-9][0-9]|20[0-9][0-9])")
 
 candidats.to_csv("candidatsAddedValue.csv", index = None, encoding='utf-8')
 
