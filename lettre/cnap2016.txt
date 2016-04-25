@@ -1,0 +1,41 @@
+Version pdf : http://tinyurl.com/h5uh7zv
+Version medium : http://tinyurl.com/jlv77go
+
+Lettre ouverte aux membres du jury du CNAP
+
+Sur 7 admis, une seule femme ! Voici la surprise que nous a réservée le jury du CNAP cette année pour sa première cuvée d’astronomes-adjoints.
+
+Si l’on regarde les chiffres dans leur globalité, les femmes repésentent 33% des admissibles au concours CNAP. Avec 1 femme sélectionnée pour 7 admis, il semble donc 2,5 fois plus probable d’être admis au concours CNAP si l’on est un homme.
+
+De fortes disparités existent néanmoins en fonction de “l’âge” des candidat·e·s (compté en nombre d’années après la soutenance de thèse). L’image qu’offre leur étude est particulièrement enrichissante :
+
+1. Les jeunes candidat·e·s (4 à thèse+1 et 16 à thèse+2) sont presque exclusivement des hommes : 3 femmes sur 20 au total. Il serait intéressant d’étudier d’où vient ce phénomène : les femmes sont-elles plus hésitantes que les hommes à postuler juste après la thèse ? S’agit-il d’un autre biais ? Ces candidats ne semblant pas être en position d’être reçus, nous ne poursuivrons pas l’analyse de cette tranche d’âge ici, ce qui ne manquerait pourtant pas d’intérêt.
+
+2. De thèse+3 à thèse+6 (inclus), on trouve 34 hommes pour 29 femmes, soit une quasi-égalité numérique. Cette égalité est à-peu-près constante sur ces 4 années, et l’âge moyen dans cette catégorie est sensiblement égal quel que soit le genre des candidat·e·s. Sur les 7 candidats reçus, 4 se trouvent dans cette catégorie. Et ici, alors que la proportion de femmes est quasiment égale à celle des hommes, ces derniers sont avantagés avec trois fois plus de chance de réussite ! D’où vient cette disproportion ?
+
+3. A partir de thèse+7, la proportion de femmes chute brutalement, et on dénombre 5 femmes pour 21 hommes (soit 20% de femmes). Un tirage au sort nous aurait donné 50% de chances d’avoir au moins une femme admise. Le jury en a décidé autrement.
+
+En choisissant des candidats plus vieux, on biaise les résultats en faveur des hommes. Si ces hommes qui ont fait le choix de continuer à postuler année après année ont bien du mérite, comment peut-on demander aux femmes de persévérer sachant que leurs chances de réussite sont de toutes façons significativement et systématiquement inférieures à celles des hommes ?
+
+Les membres du jury sont proches de la parité (7 femmes, 9 hommes), ce qui pourrait donner une impression d’impartialité. Mais tout recrutement possède sa part de subjectivité (y compris pour des scientifiques habitués à l’objectivité dans leur domaine de compétences) : femmes et hommes sont tous sujets à des biais dont ils n’ont souvent pas conscience.
+
+En faisant le choix de ne recruter qu’une seule femme, le CNAP envoie un signal psychologiquement dévastateur aux candidates à un poste d’astronome-adjointe. En diminuant un peu plus la proportion de femmes astronomes en France, c’est l’ensemble de la communauté astrophysique que le CNAP appauvrit.
+
+En reprenant les chiffres globaux (33% de femmes en tout), la probabilité que seule une femme soit choisie sur 7 candidats est de 1 sur 4. Le jury actuel est justement élu pour 4 ans : espérons que ses membres fassent en sorte que 2016 ne soit pour les femmes astronomes qu’un mauvais souvenir uniquement dû à une triste fluctuation statistique.
+
+Dr. Loïc Le Tiran
+Dr. Marc Joos
+Dr. Irène Balmès
+
+Les données et notre analyse se trouvent sur https://github.com/cbienpourtoi/cnap. 
+
+Bibliographie :
+- A propos des biais de genre :
+Hubble Telescope Time Preferentially Goes to Men - www.scientificamerican.com/article/bubble-telescope-time-gender-bias/
+The Impact of Gender on the Review of the Curricula Vitae of Job Applicants and Tenure Candidates: A National Empirical Study - https://www.researchgate.net/publication/257822430_The_Impact_of_Gender_on_the_Review_of_the_Curricula_Vitae_of_Job_Applicants_and_Tenure_Candidates_A_National_Empirical_Study
+Science faculty’s subtle gender biases favor male students - http://www.pnas.org/content/109/41/16474.abstract
+- Sur l’effet positif de la diversité : 
+How Diversity Makes Us Smarter - http://www.scientificamerican.com/article/how-diversity-makes-us-smarter/
+Evidence for a Collective Intelligence Factor in the Performance of Human Groups - http://science.sciencemag.org/content/330/6004/686
+
+
